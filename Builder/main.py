@@ -11,19 +11,19 @@ def main():
         usage()
         exit()
 
-    if args[0] == 'plain':
+    if args[0] == "plain":
         text_builder = TextBuilder()
         director = Director(text_builder)
         director.construct()
         result = text_builder.get_result()
         print(result)
 
-    if args[0] == 'html':
+    if args[0] == "html":
         html_builder = HtmlBuilder()
         director = Director(html_builder)
         director.construct()
         file_name = html_builder.get_result()
-        print(file_name + 'が作成されました。')
+        print(file_name + "が作成されました。")
 
 
 def usage():
@@ -31,5 +31,5 @@ def usage():
     print('Usage: main("html")      HTMLファイルで文書作成')
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
